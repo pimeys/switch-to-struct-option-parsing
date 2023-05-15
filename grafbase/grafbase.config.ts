@@ -8,7 +8,7 @@ enum Fruit {
 const fruit = g.enum("Fruit", Fruit);
 
 const profile = g.type("Profile", {
-  address: g.tring(),
+  address: g.string(),
   favoriteFruit: g.ref(fruit).optional()
 })
 
