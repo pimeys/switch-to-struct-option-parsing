@@ -19,4 +19,12 @@ const user = g.model("User", {
   parent: g.relation(() => user).optional(),
 })
 
+g.query("hello", {
+  args: {
+    name: g.string().optional()
+  },
+  returns: g.string(),
+  resolver: 'hello'
+})
+
 export default config({ schema: g })
